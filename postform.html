@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block app_content %}
+<div class="text-center">
+	<h1>Post</h1>
+	<form action='' method="post">
+		{{form.hidden_tag() }}
+		<p>
+			{{ form.title.label }}
+			{{ form.title(size=32) }}
+		</p>
+		<p>
+			{{ form.body.label }}
+			{{ form.body(size=32) }}
+		</p>
+		<p> 
+			{{ form.submit() }}
+		</p>
+	</form>
+</div>
+{% endblock %}
