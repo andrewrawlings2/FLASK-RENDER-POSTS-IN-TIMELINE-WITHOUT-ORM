@@ -59,7 +59,9 @@ def dashboard():
 			posts.append(body)
 			
 			dash.append(posts)
-			
+			#the list here allows the programs
+			#to successfully query it backwards by post id 
+			#thus displaying most recent to least recent
 		return render_template("dashboard.html", title="Dashboard", postings=dash)
 	except Exception as e:
 		return(str(e))
